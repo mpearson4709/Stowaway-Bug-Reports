@@ -1,0 +1,57 @@
+name: Bug Report
+description: Report something broken in Stowaway or Stowaway Pro
+labels: ["bug"]
+body:
+  - type: dropdown
+    id: edition
+    attributes:
+      label: Edition
+      options:
+        - Stowaway (free)
+        - Stowaway Pro
+    validations:
+      required: true
+
+  - type: input
+    id: blender-version
+    attributes:
+      label: Blender version
+      placeholder: e.g. 5.2.1
+    validations:
+      required: true
+
+  - type: input
+    id: stowaway-version
+    attributes:
+      label: Stowaway version
+      description: Edit > Preferences > Get Extensions, or the version shown on install
+      placeholder: e.g. 1.0.0
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      placeholder: |
+        1.
+        2.
+        3.
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected-actual
+    attributes:
+      label: What you expected vs. what happened
+    validations:
+      required: true
+
+  - type: textarea
+    id: console
+    attributes:
+      label: Console output (if any)
+      description: Window > Toggle System Console on Windows, before the bug happens
+      render: shell
+    validations:
+      required: false
