@@ -12,11 +12,36 @@ body:
     validations:
       required: true
 
+  - type: dropdown
+    id: os
+    attributes:
+      label: Operating system
+      options:
+        - Windows
+        - macOS
+        - Linux
+    validations:
+      required: true
+
   - type: input
     id: blender-version
     attributes:
       label: Blender version
       placeholder: e.g. 5.2.1
+    validations:
+      required: true
+
+  - type: dropdown
+    id: render-engine
+    attributes:
+      label: Render engine
+      options:
+        - Cycles
+        - EEVEE
+        - Octane
+        - V-Ray
+        - RenderMan
+        - Other / not render-related
     validations:
       required: true
 
